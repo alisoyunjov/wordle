@@ -5,10 +5,8 @@ A full-stack Wordle implementation featuring three distinct game modes: Classic 
 ## Requirements
 
 ### System Requirements
-- **Node.js**: v16 or higher
-- **Package Manager**: npm (comes with Node.js) or yarn
-- **Browser**: Any modern browser (Chrome, Firefox, Safari, Edge)
-- **Operating System**: Windows, macOS, or Linux
+- **Node.js**: v19 or higher
+- **npm**: v8.19+
 
 ## How to Run Locally
 
@@ -102,7 +100,7 @@ Wordle/
 ### 🎮 Single Player (Classic Wordle)
 
 **How it works:**
-- Traditional Wordle gameplay with 6 attempts to guess a 5-letter word
+- Traditional Wordle gameplay with user-configurable attempts to guess a 5-letter word
 - The target word is randomly selected at game start
 - Players receive immediate feedback with color-coded tiles:
   - 🟩 **Green**: Letter is correct and in the right position
@@ -113,7 +111,6 @@ Wordle/
 - Instant feedback on each guess
 - Visual keyboard showing letter states
 - Win/loss detection with game statistics
-- Responsive design for all devices
 
 ### 👥 Multiplayer
 
@@ -203,7 +200,7 @@ Content-Type: application/json
   "mode": "single" | "multiplayer" | "absurdle",
   "maxRounds": 6,
   "wordLength": 5,
-  "playerNames": ["Player1", "Player2"]  // Required for multiplayer
+  "playerNames": ["Player1", "Player2"]
 }
 ```
 
@@ -234,7 +231,7 @@ Content-Type: application/json
 {
   "gameId": "unique-uuid",
   "guess": "HELLO",
-  "playerId": "player-uuid"  // Optional, used for multiplayer turn validation
+  "playerId": "player-uuid"
 }
 ```
 
